@@ -1,0 +1,20 @@
+CONTROLLER
+Product::query -> query
+whereHas: make queries to relationships
+
+MODEL
+$guarded is the opposite of $fillable, with $guarded I assign the fields that I don't want to be 
+mass assigned, the other fields will be assigned normally.
+
+layout.app
+stack is like a variable 
+
+Helper
+Functions created by me to use them throughout the project
+
+Prefix
+The name I established in the prefix of the RouteserviceProvider file is admin, so the '/' route will be admin
+
+Storage/images
+php artisan storage:link 
+to create a shortcut

@@ -1,0 +1,33 @@
+(PROJECT CREATION)
+-laravel new tuckshop --jet
+
+(DATABASE DESIGN)
+file in MySQL workbench
+
+(CREATION OF MIGRATIONS, MODELS, SEEDER and FACTORY)
+-php artisan make:model Category -msf
+!! IMPORTANT !!
+whenever you need to create an intermediate table, in this case it would be the 'brand' table, in the command to execute you must add the name of the models (and always in alphabetical order):
+-php artisan make:migration create_brand_category_table
+
+(DOWNLOAD JETSTREAM COMPONENTS)
+-php artisan vendor:publish --tag=jetstream-views
+
+(profile picture)
+-jetstream.php
+
+(CREATION OF CARROUSEL LIVEWIRE COMPONENT)
+-php artisan make:livewire category-products
+
+(TRANSLATE DATES)
+-composer require jenssegers/date
+and to translate an iteration you just need to add two __ and enclose it in parentheses {{ __($info->example) }}
+
+(SHOPPINGCART INSTALLATION)
+-composer require bumbummen99/shoppingcart
+
+(Once helpers are created, edit and update the file)
+-composer dumpautoload (update composer.json file)
+
+(Store products in the DB that the user has selected thanks to the shoppingcart plugin)
+-php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
